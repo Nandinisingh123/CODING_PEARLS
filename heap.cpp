@@ -16,9 +16,10 @@ void heapify(int arr[],int n,int i)
    }
    if(large!=i)
    {
-	swap(large,arr[i]);
+     swap(arr[i], arr[large]); 
+     heapify(arr,n,large);
    }
-   heapify(arr,n,large);
+   
 
 }
 void heapsort(int a[],int n)
